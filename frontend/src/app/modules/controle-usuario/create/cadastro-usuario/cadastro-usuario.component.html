@@ -1,0 +1,136 @@
+<app-page-header heading="Cadastro de Usuário" icon="fa-th-list">
+</app-page-header>
+
+<div class="row">
+  <div class="col-lg-6">
+
+    <form name="cadastroUSuario" 
+          #form="ngForm"
+          (ngSubmit) = "salvar()"  >
+
+      <fieldset class="form-group" [ngClass]="{'has-error': (!nomeVar.valid && !nomeVar.pristine)}">
+
+        <label for="usuario">Nome</label>
+        <input type="text" required class="form-control" name="usuario" [(ngModel)]="usuario.nome" #nomeVar="ngModel" />
+
+        <p *ngIf="!nomeVar.valid && !nomeVar.pristine ">
+          Favor inserir um valor
+        </p>
+
+      </fieldset>
+
+      <fieldset class="form-group" [ngClass]="{'has-error': (!sobrenomeVar.valid && !sobrenomeVar.pristine)}">
+
+        <label for="Sobrenome">Sobrenome</label>
+        <input type="text" required minlength="3" class="form-control" name="Sobrenome" [(ngModel)]="usuario.Sobrenome" #sobrenomeVar="ngModel"
+        />
+
+        <p *ngIf="sobrenomeVar.errors?.required && !sobrenomeVar.pristine ">
+          Favor inserir um valor
+        </p>
+        <p *ngIf="sobrenomeVar.errors?.minlength && !sobrenomeVar.pristine ">
+          Favor inserir um valor com no mínimo 3 digitos
+        </p>
+
+      </fieldset>
+
+      <fieldset class="form-group" 
+                [ngClass]="{'has-error': 
+                      (!DataNascimentoVar.valid && !DataNascimentoVar.pristine)}">
+        
+                <label for="dataNascimento">Data Nascimento</label>
+        
+                <input type="date" 
+                      required class="form-control"
+                      name="dataNascimento" 
+                      [(ngModel)]="usuario.dataNascimento" 
+                      #DataNascimentoVar="ngModel" />
+        
+                <p *ngIf="DataNascimentoVar.errors?.required
+                          && !DataNascimentoVar.pristine ">
+                  Favor inserir um valor
+                </p>
+        
+      </fieldset>
+
+      <fieldset class="form-group" [ngClass]="{'has-error': 
+            (!telefoneVar.valid && !telefoneVar.pristine)}">
+        <label for="telefone">Telefone</label>
+        <input type="text" required class="form-control" name="telefone" [(ngModel)]="usuario.telefone" #telefoneVar="ngModel" />
+        <p *ngIf="telefoneVar.errors?.required && !telefoneVar.pristine">
+          Favor inserir um valor
+        </p>
+      </fieldset>
+
+      <fieldset class="form-group" [ngClass]="{'has-error': (!EmailVar.valid && !EmailVar.pristine)}">
+
+        <label for="Email">Email</label>
+
+        <input type="email" required class="form-control" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          name="Email" [(ngModel)]="usuario.email" #EmailVar="ngModel" />
+
+        <p *ngIf="EmailVar.errors?.required && !EmailVar.pristine ">
+          Favor inserir um valor
+        </p>
+        <p *ngIf="EmailVar.errors?.pattern && !EmailVar.pristine ">
+          Favor inserir um e-mail válido
+        </p>
+
+      </fieldset>
+
+      <fieldset class="form-group" 
+                [ngClass]="{'has-error': (!UserName.valid && !UserName.pristine)}">
+        
+                <label for="UserName">Login</label>
+        
+                <input type="text" 
+                       required 
+                       class="form-control"
+                       minlength="3"
+                       name="userName" 
+                       [(ngModel)]="usuario.userName" 
+                       #UserName="ngModel" />
+        
+                <p *ngIf="UserName.errors?.required && !UserName.pristine ">
+                  Favor inserir um valor
+                </p>
+                <p *ngIf="UserName.errors?.minlength && !UserName.pristine ">
+                  Favor inserir um valor com no mínimo 3 digitos
+                </p>        
+        
+        </fieldset>
+
+        <fieldset class="form-group" 
+        [ngClass]="{'has-error': (!Password.valid && !Password.pristine)}">
+
+        <label for="password">Senha</label>
+
+        <input type="password" 
+               required 
+               class="form-control"
+               minlength="6"
+               name="password" 
+               [(ngModel)]="usuario.password" 
+               #Password="ngModel" />
+
+        <p *ngIf="Password.errors?.required && !Password.pristine ">
+          Favor inserir um valor
+        </p>
+        <p *ngIf="Password.errors?.minlength && !Password.pristine ">
+          Favor inserir um valor com no mínimo 6 digitos
+        </p>        
+
+</fieldset>
+
+      <fieldset class="form-group">
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">
+            <span icon="fa fa-th-list"></span>  Salvar
+        </button>
+      </fieldset>
+
+    </form>
+    <pre>
+      {{usuario | json}}
+  </pre>
+  </div>
+</div>

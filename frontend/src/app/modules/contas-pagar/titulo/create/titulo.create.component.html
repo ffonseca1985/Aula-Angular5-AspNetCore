@@ -1,0 +1,45 @@
+<app-page-header heading="Cadastro de Titulo" icon="fa-th-list">
+</app-page-header>
+
+<form class="horizontal" name="cadastroDeTitulo">
+
+    <div class="form-group">
+        <label for="tipoTitulo" class="col-4">Tipo Titulo</label>
+
+        <span class="col-8">
+            <select name="tipoTitulo" [(ngModel)]="titulo.tipoTitulo">
+                <option *ngFor="let tipoTitulo of tipoTitulos" [ngValue]="tipoTitulo.id">
+                    {{tipoTitulo.descricao}}
+                </option>
+            </select>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="tipoPgto" class="col-4">Tipo Pagamento</label>
+
+        <span class="col-8">
+            <select name="tipoPgto" [(ngModel)]="titulo.tipoPgto">
+                <option *ngFor="let tipoPgto of tipoPgtos" [ngValue]="tipoPgto.id">
+                    {{tipoPgto.descricao}}
+                </option>
+            </select>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="tipoPgto" class="col-4">Total</label>
+        <span class="col-8">
+            <input type="text" [(ngModel)]="titulo.total">
+        </span>
+    </div>
+
+    <div class="form-group">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-success" (click)="create()">
+                Salvar
+            </button>
+        </span>
+    </div>
+
+</form>

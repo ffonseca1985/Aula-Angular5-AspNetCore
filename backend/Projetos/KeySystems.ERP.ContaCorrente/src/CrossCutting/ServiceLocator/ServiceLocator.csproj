@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <AssemblyName>KeySystems.ERP.ContaCorrente.ServiceLocator</AssemblyName>
+    <RootNamespace>KeySystems.ERP.ContaCorrente.ServiceLocator</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Bootstrap\" />
+  </ItemGroup>
+
+</Project>

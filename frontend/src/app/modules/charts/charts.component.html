@@ -1,0 +1,39 @@
+
+<div *ngIf="usuarios == undefined">
+    Carregando...
+</div>
+
+<div *ngIf="usuarios?.length <= 0 && usuarios != undefined">
+    
+    <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Ops!</strong> Sem usuários cadastrados ...
+    </div>
+    
+</div>
+
+<div class="table-responsive" *ngIf="usuarios?.length > 0">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome Completo</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- analogo ao foreach e o for do C# -->
+            <tr *ngFor="let usuario of usuarios; let i = index">
+                <td>
+                    {{i + 1}}
+                </td>
+                <td>
+                    {{usuario.nomeCompleto}}
+                </td>
+                <td>
+                    {{usuario.idade}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeySystems.ERP.Gateway", "KeySystems.ERP.Gateway\KeySystems.ERP.Gateway.csproj", "{86C6C016-C9C1-4B81-BE37-65244A6DE42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeySystems.ERP.Core", "src\KeySystems.ERP.Core\KeySystems.ERP.Core.csproj", "{158E71A0-87A0-4408-8EC4-FB5F7155F23C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentations", "1. Presentations", "{D297FA4F-1CB2-40B9-909C-496AB85AA86C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Core", "2. Core", "{848FD363-ED5E-46D9-8ED2-750B0D3F283A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase.Mysql", "src\DataBase.Mysql\DataBase.Mysql.csproj", "{11383EC1-6D8D-4DB1-9127-1FF5498817FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. DataBase", "3. DataBase", "{966FDFBE-B32D-4BCF-AC10-B992688A25C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86C6C016-C9C1-4B81-BE37-65244A6DE42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C6C016-C9C1-4B81-BE37-65244A6DE42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C6C016-C9C1-4B81-BE37-65244A6DE42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C6C016-C9C1-4B81-BE37-65244A6DE42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158E71A0-87A0-4408-8EC4-FB5F7155F23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158E71A0-87A0-4408-8EC4-FB5F7155F23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158E71A0-87A0-4408-8EC4-FB5F7155F23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158E71A0-87A0-4408-8EC4-FB5F7155F23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11383EC1-6D8D-4DB1-9127-1FF5498817FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11383EC1-6D8D-4DB1-9127-1FF5498817FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11383EC1-6D8D-4DB1-9127-1FF5498817FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11383EC1-6D8D-4DB1-9127-1FF5498817FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86C6C016-C9C1-4B81-BE37-65244A6DE42E} = {D297FA4F-1CB2-40B9-909C-496AB85AA86C}
+		{158E71A0-87A0-4408-8EC4-FB5F7155F23C} = {848FD363-ED5E-46D9-8ED2-750B0D3F283A}
+		{11383EC1-6D8D-4DB1-9127-1FF5498817FD} = {966FDFBE-B32D-4BCF-AC10-B992688A25C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B61713A1-4B0A-4529-B66F-4965B0BBAE24}
+	EndGlobalSection
+EndGlobal

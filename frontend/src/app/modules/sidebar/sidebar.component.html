@@ -1,0 +1,83 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <div class="list-group">
+        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
+      </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <span><i class="fa fa-user"></i>Controle de Usuário</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/controleusuario/novo']">
+                            <span>
+                                <i class="fa fa-plus-circle"></i> Novo
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('contasAPagar')">
+                    <span><i class="fa fa-credit-card"></i>Contas a Pagar</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'contasAPagar'">
+                    <ul class="submenu">
+                        
+                        <li class="nested">
+                            <a (click)="addExpandClass('empresa')"><span>
+                                <i class="fa fa-bank"></i> </span> Empresa
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a [routerLink]="['/contasapagar/empresa']">
+                                        <span>
+                                            <i class="fa fa-sticky-note-o"></i> Relatório
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nested" [class.expand]="showMenu === 'fornecedor'">
+                            <a  (click)="addExpandClass('fornecedor')"><span>
+                                <i class="fa fa-bank"></i></span> Fornecedor
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a [routerLink]="['/contasapagar/fornecedor']">
+                                        <span>
+                                            <i class="fa fa-sticky-note-o"></i> Relatório
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nested" [class.expand]="showMenu === 'titulo'">
+                                <a  (click)="addExpandClass('titulo')"><span>
+                                    <i class="fa fa-bank"></i></span> Titulo
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a [routerLink]="['/contasapagar/create']">
+                                            <span>
+                                                <i class="fa fa-sticky-note-o"></i> Criar
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </li>
+        </div>
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('contaCorrente')">
+                <span><i class="fa fa-list"></i>Conta Corrente</span>
+            </a>
+        </div>
+    </div>
+</nav>

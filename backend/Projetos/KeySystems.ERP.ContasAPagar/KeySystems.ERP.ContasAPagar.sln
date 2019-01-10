@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD64D8CC-CB1E-481B-AA34-666CE84F12A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E6989C0D-8343-4EB1-AA6F-D380B30241C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Core", "2. Core", "{9CACBC60-0EC4-49D7-B89B-885075E26F70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{D81E8448-B92B-4BEE-B5CB-80BF304EE70F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B719A2F8-DF9F-4D6C-AE50-4EA98374B9B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeySystems.ERP.ContasAPagar", "src\Presentation\KeySystems.ERP.ContasAPagar\KeySystems.ERP.ContasAPagar.csproj", "{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeySystems.ERP.ContasAPagar.Core", "src\KeySystems.ERP.ContasAPagar.Core\KeySystems.ERP.ContasAPagar.Core.csproj", "{7FC124C1-3742-42A8-ADB4-44E4B1095B42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC124C1-3742-42A8-ADB4-44E4B1095B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC124C1-3742-42A8-ADB4-44E4B1095B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC124C1-3742-42A8-ADB4-44E4B1095B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC124C1-3742-42A8-ADB4-44E4B1095B42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CACBC60-0EC4-49D7-B89B-885075E26F70} = {BD64D8CC-CB1E-481B-AA34-666CE84F12A7}
+		{D81E8448-B92B-4BEE-B5CB-80BF304EE70F} = {BD64D8CC-CB1E-481B-AA34-666CE84F12A7}
+		{B719A2F8-DF9F-4D6C-AE50-4EA98374B9B6} = {E6989C0D-8343-4EB1-AA6F-D380B30241C4}
+		{42841C5F-11AE-4FEF-AF1B-63CD4B5F82EA} = {D81E8448-B92B-4BEE-B5CB-80BF304EE70F}
+		{7FC124C1-3742-42A8-ADB4-44E4B1095B42} = {9CACBC60-0EC4-49D7-B89B-885075E26F70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73C2246B-DBAB-43A7-875F-6E8C1300A602}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+
+
+ .has-error > input {
+     border-color: red;
+ }
+
+
+ .has-error > label, .has-error > p {
+    color: red;
+    font-weight: bold
+ }
